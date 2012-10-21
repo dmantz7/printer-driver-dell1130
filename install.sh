@@ -55,6 +55,9 @@ then
 	chown root:root rastertosamsungspl 2>&1;
 	check_success;
 
+	chmod 0755 rastertosamsungspl 2>&1;
+	check_success;
+
 	success=1;
 
 elif [ "$UNAME_P" == "i686" ]
@@ -67,6 +70,9 @@ then
 	check_success;
 
 	chown root:root rastertosamsungspl 2>&1;
+	check_success;
+
+	chmod 0755 rastertosamsungspl 2>&1;
 	check_success;
 
 	success=1;
