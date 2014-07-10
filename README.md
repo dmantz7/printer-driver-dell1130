@@ -58,4 +58,6 @@ located in this folder with the name **dp1130.ppd**.
 
 * Run **/tools/fixmaker-ml1915/usbprns2.exe ML1910_V1.001.00.83.fls** to reset the cartridge and the printer chipset.
 
+# Other Distros
 
+* Fedora 20 — worked like a charm (2014-06-02)
