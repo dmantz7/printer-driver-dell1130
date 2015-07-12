@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -e;
+
+chown root:root /usr/lib/cups/filter/rastertosamsungspl || true;
+chmod 0755 /usr/lib/cups/filter/rastertosamsungspl || true;
+

@@ -1,0 +1,13 @@
+Package: printer-driver-dell1130
+Version: __VERSION__
+Section: text
+Priority: optional
+Architecture: amd64
+Installed-Size: __SIZE__
+Depends: cups-filters, libavahi-common3, libavahi-client3, libcups2, libc6, libhogweed2, libk5crypto3, libkrb5support0, libnettle4
+Recommends: cups-ppdc
+Conflicts: printer-driver-dell1130
+Maintainer: Christoph Martens <martensms@github.com>
+Description: Printer driver for Dell 1130 laser printers.
+Homepage: https://github.com/martensms/printer-driver-dell1130
+

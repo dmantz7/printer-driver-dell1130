@@ -1,34 +1,44 @@
 
 # License
 
-Released under WTFPL - Do What The Fuck You Want To Public License.
+```text
 
+      DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE 
+                    Version 2, December 2004 
 
-# Install the rasterizer
+ Copyright (C) 2012 Christoph Martens
 
-Go to this root folder and execute the following command in your shell:
+ Everyone is permitted to copy and distribute verbatim or modified 
+ copies of this license document, and changing it is allowed as long 
+ as the name is changed. 
 
-```bash
-sudo ./install.sh
+            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE 
+   TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION 
+
+  0. You just DO WHAT THE FUCK YOU WANT TO.
+
 ```
 
+# Installation
 
-# Install the printer in CUPS
 
-Open your Web Browser and navigate to [http://localhost:631/admin](http://localhost:631/admin).
+Go to the [Releases Section](./releases) and download the driver for your system architecture.
+The driver releases should work with CUPS on all Debian and Ubuntu variants.
 
-* Click on **Add Printer**
+After installation of the package, follow the Configuration Guide.
 
-* If you are using a remote printer that is, for example, plugged in
-at your **fritz.box**, you have to select **AppSocket / HP JetDirect**.
 
-* Click on **Continue** and enter the socket url, which will be similar
-to **socket://fritz.box:9100** if you are using a remote printer.
+# Configuration for Local Usage
 
-* Enter the details of the printer, click on **Continue**.
+* Open your Web Browser and navigate to [http://localhost:631/admin](http://localhost:631/admin).
 
-* **Choose File** for a custom **PPD file** and use the file that is
-located in this folder with the name **dp1130.ppd**.
+* Click on *Add Printer*
+
+* ![Select Printer](./docs/add-printer_01.png)
+
+* ![Name Printer](./docs/add-printer_02.png)
+
+* ![Select Model](./docs/add-printer_03.png)
 
 
 # Error and status codes (LED signals)
@@ -58,6 +68,3 @@ located in this folder with the name **dp1130.ppd**.
 
 * Run **/tools/fixmaker-ml1915/usbprns2.exe ML1910_V1.001.00.83.fls** to reset the cartridge and the printer chipset.
 
-# Other Distros
-
-* Fedora 20 — worked like a charm (2014-06-02)
