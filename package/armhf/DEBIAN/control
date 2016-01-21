@@ -2,7 +2,7 @@ Package: printer-driver-dell1130
 Version: __VERSION__
 Section: text
 Priority: optional
-Architecture: amd64
+Architecture: armhf
 Installed-Size: __SIZE__
 Depends: libc6 (>= 2.4), libcups2 (>= 1.4.0), libcupsimage2 (>= 1.4.0), libgcc1 (>= 1:4.4.0), libjbig0 (>= 2.0), libstdc++6 (>= 4.3.0), cups (>= 1.5.0-3~), cups-client, cups-filters (>= 1.0.36)
 Recommends: cups-ppdc

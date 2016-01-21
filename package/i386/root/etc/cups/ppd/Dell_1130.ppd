@@ -21,10 +21,10 @@
 *cupsVersion:	1.1
 *cupsManualCopies: False
 *cupsModelNumber: 196
-*cupsFilter:  "application/vnd.cups-postscript 0 rastertosamsungspl"
-*ModelName:     "Dell 1130 Laser Printer"
-*ShortNickName: "Dell 1130 Laser Printer"
-*NickName:      "Dell 1130 Laser Printer"
+*cupsFilter:  "application/vnd.cups-raster 0 rastertoqpdl"
+*ModelName:     "Dell 1130"
+*ShortNickName: "Dell 1130"
+*NickName:      "Dell 1130"
 *PSVersion:	"(3010.000) 550"
 *LanguageLevel: "3"
 *ColorDevice: False

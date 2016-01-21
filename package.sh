@@ -3,7 +3,7 @@
 set -u;
 set -e;
 
-VERSION="0.1.0";
+VERSION="0.1.1";
 
 
 BUNDLE_ROOT=$(cd "$(dirname "$0")"; pwd);
@@ -94,6 +94,47 @@ if [ ! -f "$DIST_ROOT/printer-driver-dell1130_${VERSION}_amd64.deb" ]; then
 
 
 	rm -rf "$DIST_ROOT/amd64";
+
+fi;
+
+
+
+
+if [ ! -f "$DIST_ROOT/printer-driver-dell1130_${VERSION}_armhf.deb" ]; then
+
+	cd $BUNDLE_ROOT;
+
+	if [ -d "$DIST_ROOT/armhf" ]; then
+		rm -rf "$DIST_ROOT/armhf";
+	fi;
+
+	rsync -a ./package/armhf/ "$DIST_ROOT/armhf/";
+
+	find "$DIST_ROOT/armhf/" -type d -exec chmod 0755 {} \;
+	find "$DIST_ROOT/armhf/" -type f -exec chmod go-w {} \;
+	chown -R root:root "$DIST_ROOT/armhf/";
+
+
+	cd $DIST_ROOT/armhf/root;
+	tar czf $DIST_ROOT/armhf/data.tar.gz *;
+
+
+	cd $DIST_ROOT/armhf/DEBIAN;
+	let SIZE=`du -s $DIST_ROOT/armhf/root | sed s'/\s\+.*//'`+8
+	sed s"/__SIZE__/${SIZE}/" -i ./control;
+	sed s"/__VERSION__/${VERSION}/" -i ./control;
+	tar czf "$DIST_ROOT/armhf/control.tar.gz" *;
+
+
+	cd $DIST_ROOT/armhf;
+	echo 2.0 > ./debian-binary;
+	find $DIST_ROOT/armhf/ -type d -exec chmod 0755 {} \;
+	find $DIST_ROOT/armhf/ -type f -exec chmod go-w {} \;
+	chown -R root:root $DIST_ROOT/armhf/;
+	ar r "$DIST_ROOT/printer-driver-dell1130_${VERSION}_armhf.deb" debian-binary control.tar.gz data.tar.gz;
+
+
+	rm -rf "$DIST_ROOT/armhf";
 
 fi;
 

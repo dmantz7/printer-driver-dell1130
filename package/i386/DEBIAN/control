@@ -4,10 +4,9 @@ Section: text
 Priority: optional
 Architecture: i386
 Installed-Size: __SIZE__
-Depends: cups-filters, libavahi-common3, libavahi-client3, libcups2, libc6, libhogweed2, libk5crypto3, libkrb5support0, libnettle4
+Depends: libc6 (>= 2.4), libcups2 (>= 1.4.0), libcupsimage2 (>= 1.4.0), libgcc1 (>= 1:4.4.0), libjbig0 (>= 2.0), libstdc++6 (>= 4.3.0), cups (>= 1.5.0-3~), cups-client, cups-filters (>= 1.0.36)
 Recommends: cups-ppdc
-Conflicts: printer-driver-dell1130
-Maintainer: Christoph Martens <martensms@github.com>
+Maintainer: Cookie Engineer <cookiengineer@github.com>
 Description: Printer driver for Dell 1130 laser printers.
 Homepage: https://github.com/martensms/printer-driver-dell1130
 
